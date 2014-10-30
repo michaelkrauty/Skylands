@@ -1,0 +1,1 @@
+note: this is not how I would've written this plugin myself. This is a direct translation from a Skript script.

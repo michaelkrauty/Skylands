@@ -1,0 +1,20 @@
+name: Skylands
+version: 1.0
+author: michaelkrauty
+main: me.michaelkrauty.Skylands.Main
+commands:
+  sudosay:
+    permission: sudo.say
+    usage: /sudosay <player> <message>
+  staffadd:
+    permission: server.admin
+    usage: /staffadd <player> <rank>
+  donatoradd:
+    permission: server.admin
+    usage: /donatoradd <player> <rank>
+  staffremove:
+    permission: server.admin
+    usage: /staffremove <player> <rank>
+  donatorremove:
+    permission: server.admin
+    usage: /donatorremove <player> <rank>
