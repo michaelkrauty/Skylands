@@ -38,6 +38,8 @@ public class Main extends JavaPlugin {
 		getServer().getPluginCommand("callhacks").setExecutor(new CallHacks());
 		getServer().getPluginCommand("cc").setExecutor(new CC());
 		getServer().getPluginCommand("staff").setExecutor(new Staff());
+		getServer().getPluginCommand("staffasks").setExecutor(new StaffAsks());
+		getServer().getPluginCommand("staffasks-reset").setExecutor(new StaffAsksReset());
 	}
 
 	public void onDisable() {
