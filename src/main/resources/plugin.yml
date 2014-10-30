@@ -25,3 +25,8 @@ commands:
     usage: /cc
   staff:
     usage: /staff <text>
+  staffasks:
+    usage: /staffasks <player>
+  staffasks-reset:
+    usage: /staffasks-reset <player>
+    permission: staff.asks.reset

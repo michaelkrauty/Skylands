@@ -34,7 +34,7 @@ public class Staff implements CommandExecutor {
 				if (sender instanceof Player) {
 					Player player = (Player) sender;
 					User user = Main.main.getUserManager().getUser(player);
-					if (user.getStaffAsks() == -1)
+					if (user.getStaffAsks() == 0)
 						user.setStaffAsks(1);
 					else
 						user.setStaffAsks(user.getStaffAsks() + 1);

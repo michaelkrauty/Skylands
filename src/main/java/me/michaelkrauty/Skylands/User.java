@@ -47,7 +47,7 @@ public class User {
 		if (playerData.getString("staffasks") != null)
 			return playerData.getInt("staffasks");
 		else
-			return -1;
+			return 0;
 	}
 
 	public void setStaffAsks(int asks) {
