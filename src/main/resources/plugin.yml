@@ -8,13 +8,20 @@ commands:
     usage: /sudosay <player> <message>
   staffadd:
     permission: server.admin
-    usage: /staffadd <player> <rank>
+    usage: /staffadd <player>
   donatoradd:
     permission: server.admin
-    usage: /donatoradd <player> <rank>
+    usage: /donatoradd <player>
   staffremove:
     permission: server.admin
-    usage: /staffremove <player> <rank>
+    usage: /staffremove <player>
   donatorremove:
     permission: server.admin
-    usage: /donatorremove <player> <rank>
+    usage: /donatorremove <player>
+  callhacks:
+    permission: hacks.call
+    usage: /callhacks <player>
+  cc:
+    usage: /cc
+  staff:
+    usage: /staff <text>

@@ -43,6 +43,17 @@ public class User {
 		playerData.set("rank", rank);
 	}
 
+	public int getStaffAsks() {
+		if (playerData.getString("staffasks") != null)
+			return playerData.getInt("staffasks");
+		else
+			return -1;
+	}
+
+	public void setStaffAsks(int asks) {
+		playerData.set("staffasks", asks);
+	}
+
 
 	/**
 	 * FILE UTIL

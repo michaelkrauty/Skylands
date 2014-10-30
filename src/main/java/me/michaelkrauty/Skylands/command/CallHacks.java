@@ -12,15 +12,14 @@ import org.bukkit.entity.Player;
  *
  * @author michaelkrauty
  */
-public class StaffAdd implements CommandExecutor {
+public class CallHacks implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
 		if (sender.hasPermission(cmd.getPermission())) {
 			Player target;
 			if ((target = Bukkit.getPlayer(args[0])) != null) {
-				Main.main.getUserManager().getUser(target).setRank("staff");
-				sender.sendMessage("§aAdded " + target.getName() + " to staff!");
+				Bukkit.broadcastMessage("§d§1HACKS HAVE BEEN CALLED! :O §b§1" + sender.getName() + " is accusing " + target.getName() + " of hacking!");
 			}
 		}
 		return true;

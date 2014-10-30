@@ -1,8 +1,6 @@
 package me.michaelkrauty.Skylands;
 
-import me.michaelkrauty.Skylands.command.DonatorAdd;
-import me.michaelkrauty.Skylands.command.StaffAdd;
-import me.michaelkrauty.Skylands.command.SudoSay;
+import me.michaelkrauty.Skylands.command.*;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -34,6 +32,12 @@ public class Main extends JavaPlugin {
 		getServer().getPluginCommand("sudosay").setExecutor(new SudoSay());
 		getServer().getPluginCommand("staffadd").setExecutor(new StaffAdd());
 		getServer().getPluginCommand("donatoradd").setExecutor(new DonatorAdd());
+		getServer().getPluginCommand("donatoradd").setExecutor(new DonatorAdd());
+		getServer().getPluginCommand("staffremove").setExecutor(new StaffRemove());
+		getServer().getPluginCommand("donatorremove").setExecutor(new DonatorRemove());
+		getServer().getPluginCommand("callhacks").setExecutor(new CallHacks());
+		getServer().getPluginCommand("cc").setExecutor(new CC());
+		getServer().getPluginCommand("staff").setExecutor(new Staff());
 	}
 
 	public void onDisable() {

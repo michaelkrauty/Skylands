@@ -20,6 +20,7 @@ public class DonatorAdd implements CommandExecutor {
 			Player target;
 			if ((target = Bukkit.getPlayer(args[0])) != null) {
 				Main.main.getUserManager().getUser(target).setRank("donator");
+				sender.sendMessage("§aAdded " + target.getName() + " to donators!");
 			}
 		}
 		return true;

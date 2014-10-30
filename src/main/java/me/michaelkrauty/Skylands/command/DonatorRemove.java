@@ -20,6 +20,7 @@ public class DonatorRemove implements CommandExecutor {
 			Player target;
 			if ((target = Bukkit.getPlayer(args[0])) != null) {
 				Main.main.getUserManager().getUser(target).setRank("default");
+				sender.sendMessage("§aRemoved " + target.getName() + " from donators!");
 			}
 		}
 		return true;
