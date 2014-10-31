@@ -32,20 +32,22 @@ public class Main extends JavaPlugin {
 			public void run() {
 				for (Player p : Bukkit.getOnlinePlayers()) {
 					User u = userManager.getUser(p);
-					if (u.getEffect().equals("smoking")) {
-						ParticleEffect.LARGE_SMOKE.display(p.getLocation(), 3, 0, 0, 0, 1, 5);
-					}
-					if (u.getEffect().equals("flaming")) {
-						ParticleEffect.FLAME.display(p.getLocation(), 3, 0, 0, 0, 1, 10);
-					}
-					if (u.getEffect().equals("redstoning")) {
-						ParticleEffect.RED_DUST.display(p.getLocation(), 3, 0, 0, 0, 1, 100);
-					}
-					if (u.getEffect().equals("lavaing")) {
-						ParticleEffect.DRIP_LAVA.display(p.getLocation(), 3, 0, 0, 0, 1, 100);
-					}
-					if (u.getEffect().equals("splashing")) {
-						ParticleEffect.SPLASH.display(p.getLocation(), 3, 0, 0, 0, 1, 100);
+					if (u.getEffect() != null) {
+						if (u.getEffect().equals("smoking")) {
+							ParticleEffect.LARGE_SMOKE.display(p.getLocation(), 3, 0, 0, 0, 1, 5);
+						}
+						if (u.getEffect().equals("flaming")) {
+							ParticleEffect.FLAME.display(p.getLocation(), 3, 0, 0, 0, 1, 10);
+						}
+						if (u.getEffect().equals("redstoning")) {
+							ParticleEffect.RED_DUST.display(p.getLocation(), 3, 0, 0, 0, 1, 100);
+						}
+						if (u.getEffect().equals("lavaing")) {
+							ParticleEffect.DRIP_LAVA.display(p.getLocation(), 3, 0, 0, 0, 1, 100);
+						}
+						if (u.getEffect().equals("splashing")) {
+							ParticleEffect.SPLASH.display(p.getLocation(), 3, 0, 0, 0, 1, 100);
+						}
 					}
 				}
 			}
@@ -66,6 +68,8 @@ public class Main extends JavaPlugin {
 		getServer().getPluginCommand("staffasks-reset").setExecutor(new StaffAsksReset());
 		getServer().getPluginCommand("staff-add").setExecutor(new StaffAdd2());
 		getServer().getPluginCommand("staff-remove").setExecutor(new StaffRemove2());
+		getServer().getPluginCommand("effectsudo").setExecutor(new EffectSudo());
+		getServer().getPluginCommand("effects").setExecutor(new Effects());
 	}
 
 	public void onDisable() {
