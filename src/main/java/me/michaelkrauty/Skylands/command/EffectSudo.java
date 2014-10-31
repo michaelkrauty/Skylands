@@ -11,14 +11,18 @@ import org.bukkit.entity.Player;
  *
  * @author michaelkrauty
  */
-public class CallHacks implements CommandExecutor {
+public class EffectSudo implements CommandExecutor {
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
 		if (sender.hasPermission(cmd.getPermission())) {
 			Player target;
 			if ((target = Bukkit.getPlayer(args[0])) != null) {
-				Bukkit.broadcastMessage("§d§1HACKS HAVE BEEN CALLED! :O §b§1" + sender.getName() + " is accusing " + target.getName() + " of hacking!");
+				String message = "";
+				for (int i = 1; i < args.length; i++) {
+					message += args[i] + " ";
+				}
+				target.performCommand(message.trim());
 			}
 		}
 		return true;

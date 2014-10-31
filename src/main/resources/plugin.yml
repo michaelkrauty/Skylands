@@ -34,3 +34,9 @@ commands:
     usage: /staff-add <text> <text>
   staff-remove:
     usage: /staff-remove <text> <text>
+  effectsudo:
+    usage: /effectsudo <player> <text>
+    permission: effects.console
+  effects:
+    usage: /effects <text> <text>
+    permission: effects.*

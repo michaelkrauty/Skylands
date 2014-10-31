@@ -1,7 +1,6 @@
 package me.michaelkrauty.Skylands.command;
 
 import me.michaelkrauty.Skylands.Main;
-import me.michaelkrauty.Skylands.User;
 import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

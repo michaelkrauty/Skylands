@@ -1,6 +1,8 @@
 package me.michaelkrauty.Skylands;
 
 import me.michaelkrauty.Skylands.command.*;
+import org.bukkit.Bukkit;
+import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.io.File;
@@ -26,6 +28,28 @@ public class Main extends JavaPlugin {
 		getServer().getPluginManager().registerEvents(new PlayerListener(this), this);
 		registerCommands();
 		userManager.loadOnlineUsers();
+		getServer().getScheduler().scheduleSyncRepeatingTask(this, new Runnable() {
+			public void run() {
+				for (Player p : Bukkit.getOnlinePlayers()) {
+					User u = userManager.getUser(p);
+					if (u.getEffect().equals("smoking")) {
+						ParticleEffect.LARGE_SMOKE.display(p.getLocation(), 3, 0, 0, 0, 1, 5);
+					}
+					if (u.getEffect().equals("flaming")) {
+						ParticleEffect.FLAME.display(p.getLocation(), 3, 0, 0, 0, 1, 10);
+					}
+					if (u.getEffect().equals("redstoning")) {
+						ParticleEffect.RED_DUST.display(p.getLocation(), 3, 0, 0, 0, 1, 100);
+					}
+					if (u.getEffect().equals("lavaing")) {
+						ParticleEffect.DRIP_LAVA.display(p.getLocation(), 3, 0, 0, 0, 1, 100);
+					}
+					if (u.getEffect().equals("splashing")) {
+						ParticleEffect.SPLASH.display(p.getLocation(), 3, 0, 0, 0, 1, 100);
+					}
+				}
+			}
+		}, 5, 5);
 	}
 
 	private void registerCommands() {

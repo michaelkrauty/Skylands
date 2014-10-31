@@ -54,6 +54,18 @@ public class User {
 		playerData.set("staffasks", asks);
 	}
 
+	public void setEffect(String effect) {
+		playerData.set("effect", effect);
+	}
+
+	public String getEffect() {
+		return playerData.getString("effect");
+	}
+
+	public void removeEffect() {
+		playerData.set("effect", null);
+	}
+
 
 	/**
 	 * FILE UTIL
