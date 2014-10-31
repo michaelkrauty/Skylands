@@ -30,3 +30,5 @@ commands:
   staffasks-reset:
     usage: /staffasks-reset <player>
     permission: staff.asks.reset
+  staff-add:
+    usage: /staff-add <text> <text>
