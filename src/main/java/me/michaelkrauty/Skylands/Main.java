@@ -41,6 +41,7 @@ public class Main extends JavaPlugin {
 		getServer().getPluginCommand("staffasks").setExecutor(new StaffAsks());
 		getServer().getPluginCommand("staffasks-reset").setExecutor(new StaffAsksReset());
 		getServer().getPluginCommand("staff-add").setExecutor(new StaffAdd2());
+		getServer().getPluginCommand("staff-remove").setExecutor(new StaffRemove2());
 	}
 
 	public void onDisable() {

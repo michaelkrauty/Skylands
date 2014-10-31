@@ -32,3 +32,5 @@ commands:
     permission: staff.asks.reset
   staff-add:
     usage: /staff-add <text> <text>
+  staff-remove:
+    usage: /staff-remove <text> <text>
